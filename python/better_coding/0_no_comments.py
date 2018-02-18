@@ -9,7 +9,7 @@ for sentence in sentences:
         words = words + [len(sentence.split())]
 average = sum(words)/len(sentences)
 print(average)
-VERBS = ['is', 'was', 'were', 'be', 'being', 'been', 'have']
+VERBS = ['is', 'was', 'were', 'be', 'being', 'been', 'having']
 passive = []
 for sentence in sentences:
     words = sentence.split()
