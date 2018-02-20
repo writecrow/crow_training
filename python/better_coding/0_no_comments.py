@@ -1,5 +1,5 @@
 import re
-text = open('text.txt','r')
+text = open('text.txt', 'r')
 raw = text.read()
 sentences = re.split(r' *[\.\?!][\'"\)\]]*', raw + ' ')
 print(sentences)
@@ -13,7 +13,7 @@ VERBS = ['is', 'was', 'were', 'be', 'being', 'been', 'having']
 passive = []
 for sentence in sentences:
     words = sentence.split()
-    if len(words) > 0:    
+    if len(words) > 0:
         match = bool(set(VERBS) & set(words))
         if match:
             previous_is_helper_verb = False

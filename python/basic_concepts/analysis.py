@@ -1,6 +1,9 @@
+#!/usr/local/bin/python3
+# -*- coding: utf-8 -*-
+
 import re
 
-words = open('text.txt','r')
+words = open('text.txt', 'r')
 text = words.read()
 
 # A very simplistic way, via regular expression
@@ -50,7 +53,7 @@ VERBS = ['is', 'was', 'were', 'be', 'being', 'been', 'have']
 passive = []
 for sentence in sentences:
     words = sentence.split()
-    if len(words) > 0:    
+    if len(words) > 0:
         match = bool(set(VERBS) & set(words))
         if match:
             found = False

@@ -23,13 +23,13 @@ args = parser.parse_args()
 
 # Check if there is a file argument passed, and if the file exists
 if args.file and os.path.isfile(args.file):
-  # Open the text.
-  raw = text_process.open_file(args.file)
-  # Find all sentences.
-  sentences = text_process.split_into_sentences(raw)
-  # Find average sentence length.
-  print(text_process.average_sentence_length(sentences))
-  for sentence in sentences:
-    # Print any sentences determined to be passive voice.
-    if text_process.is_passive_sentence(sentence) == True:
-      print(sentence)
+    # Open the text.
+    raw = text_process.open_file(args.file)
+    # Find all sentences.
+    sentences = text_process.split_into_sentences(raw)
+    # Find average sentence length.
+    print(text_process.average_sentence_length(sentences))
+    for sentence in sentences:
+        # Print any sentences determined to be passive voice.
+        if text_process.is_passive_sentence(sentence):
+            print(sentence)
