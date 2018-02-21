@@ -23,3 +23,9 @@ This directory includes example scripts written in `bash`, primarily demonstrati
 * Finding all header values and putting into a manipulable list
 * Finding all matches of phrases like "were xxx by" or "was xxx by"
 6. `remote_data` demonstrates basic methods for retrieving content from non-local files
+
+## Sandbox
+This is a directory to be used for simply trying out coding ideas, and using Git in order
+to keep track of that code. One of the team scaffolding assignments is to create an issue
+in this repository, create a branch that adds a file to this "Sandbox" directory, and open
+that as a "pull request" for team review.
