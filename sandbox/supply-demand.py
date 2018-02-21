@@ -5,11 +5,15 @@
 import calendar
 from decimal import Decimal
 
-""" Open a file & read it """
+""" The 'open()' function allows you to open files
+The first parameter in the function is a filename,
+and the second is 'how' you want to open it (e.g.
+read, write, as a byte file, etc.)
+"""
 file = open('title.txt', 'r')
 title = file.read()
 
-""" Print stuff """
+""" The 'print' function can print either variables or text """
 print(title)
 print("You have 1 year.")
 print("Your goal is to either:")
@@ -21,7 +25,7 @@ print("making 1,000 widgets per month.")
 print("You have $1,000 in capital. Good luck!")
 print()
 
-"""Ask for, and store user input"""
+"""Use the 'input' function to prompt the user for input"""
 c1supply = float(input("How many widgets to make (max 1000)?"))
 c1price = float(input("Set the price per widget for the 1st month:"))
 c1capital = 1000
@@ -29,10 +33,12 @@ c2capital = 1000
 c2supply = 200
 c2price = 0.70
 
-"""Here's an example of try-except syntax"""
-
 
 def is_number(var):
+    # A simple function that checks if a value
+    # is, indeed, a number. It uses the try-except
+    # syntax to try to do something in code and
+    # if it fails, gracefully handle the error.
     try:
         float(var)
         return True
