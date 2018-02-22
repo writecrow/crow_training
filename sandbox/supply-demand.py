@@ -80,7 +80,7 @@ for x in range(1, rounds):
     c1capital = c1capital + c1profit
     c2capital = c2capital + c2profit
 
-    name = ['You', 'SirConroyCo']
+    name = ['You ', 'They']
     supply = [str(c1supply) + " ", str(c2supply) + " "]
     price = [c1price, c2price]
     demand = [c1demand, c2demand]
