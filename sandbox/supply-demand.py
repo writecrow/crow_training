@@ -55,6 +55,10 @@ for x in range(1, rounds):
     totalprices = c1price + c2price
     c1demand = (totalprices - c1price) / totalprices - c1price + 1.05
     c2demand = (totalprices - c2price) / totalprices - c2price + 1.05
+    if c1demand < 0:
+        c1demand = 0
+    if c2demand < 0:
+        c2demand = 0
     c1sold = c1supply * c1demand * c1demand
     c2sold = c2supply * c2demand * c2demand
     if c1sold + c2sold > 1999:
@@ -93,7 +97,7 @@ for x in range(1, rounds):
     summary.sort()
 
     print("*** " + calendar.month_name[x].upper() + " REPORT ***")
-    print("Name\t\tWidgets\tPrice\tDemand\tSold\tRevenue\tProfit\tCapital")
+    print("Name\tWidgets\tPrice\tDemand\tSold\tRevenue\tProfit\tCapital")
     for item in summary:
         print("")
         for data in item:
