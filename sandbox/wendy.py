@@ -1,0 +1,2 @@
+#!COMMENT
+print ("Hello World")
