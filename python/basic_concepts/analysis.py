@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 import re
@@ -14,39 +14,13 @@ text = words.read()
 sentences = re.split(r' *[\.\?!][\'"\)\]]*\s *', text + ' ')
 print(sentences)
 
-# A very simplistic way to split text into sentences via tokenization
-# token = ""
-# tokens = []
-# SENTENCEENDINGS = ( ".", "!", "?" )
-# for i in range(0, len(text)):
-#     if text[i] in SENTENCEENDINGS:
-#             if len(token) > 0:
-#                 tokens = tokens + [ token ]
-#             tokens = tokens + [ text[i] ]
-#             token = ""
-#     else:
-#         token = token + text[i]
-# if len(token) > 0:
-#     tokens = tokens + [ token ]
-# print(tokens)
-
 # Calculate average sentence length
 lengths = []
 for sentence in sentences:
     if len(sentence.split()) > 0:
         lengths = lengths + [len(sentence.split())]
 average = sum(lengths)/len(lengths)
-print(average)
-
-# Simplistic way to find all sentences with "were * by" or "was * by"
-constructions = []
-for sentence in sentences:
-    were = re.search(r' were\s(.*)\sby', sentence + ' ')
-    was = re.search(r' was\s(.*)\sby', sentence + ' ')
-    if was or were:
-        constructions = constructions + [sentence]
-print(constructions)
-# What limitations does this method have?
+print('Average sentence length: ' + str(average))
 
 # Simplistic way to find all passive voice constructions
 VERBS = ['is', 'was', 'were', 'be', 'being', 'been', 'have']
