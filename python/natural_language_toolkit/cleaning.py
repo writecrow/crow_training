@@ -6,7 +6,6 @@ This demonstrates retrieving text from a remote URL using the `urllib` library
 In this case, we request the writecrow.org homepage.
 '''
 
-import nltk
 from urllib import request
 from bs4 import BeautifulSoup
 
